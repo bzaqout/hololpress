@@ -29,12 +29,10 @@
                                         </div><!-- post-thumbnail /-->
                                     <?php endif; ?>
                                     <div class="post-meta">
-                                    	<span class="postDate">
-                                        	<?php the_date();?> , <?php the_time()?>
-                                        </span>
+                                    	<?php holol_get_time()?>
                                     </div>
                                     <h2 class="post-box-title">
-                                        <a href="<?php the_title()?>">
+                                        <a href="<?php the_permalink()?>">
                                             <?php the_title()?>
                                         </a>
                                     </h2>
@@ -74,7 +72,7 @@
                                     	<?php holol_get_time()?>
                                     </div>
                                     <h2 class="post-box-title">
-                                        <a href="<?php the_title()?>">
+                                        <a href="<?php the_permalink()?>">
                                             <?php the_title()?>
                                         </a>
                                     </h2>
@@ -106,7 +104,7 @@
                                 	<a href="<?php the_permalink()?>" title="<?php the_title( )?>" rel="bookmark">
                                     	<?php the_post_thumbnail('holol-medium')?>
                                         <span class="fa overlay-icon"></span>
-                                        <h3><?php the_title( )?></h3>
+                                        <h3><?php the_permalink( )?></h3>
                                     </a>
 								</div>
 								<?php }?>	

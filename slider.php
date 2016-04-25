@@ -1,5 +1,5 @@
 <section class="slider">
-        <div class="flexslider" id="home-slider">
+        <div class="flexslider clearfix" id="home-slider">
           <ul class="slides">
 					<?php 
 					$args = array(

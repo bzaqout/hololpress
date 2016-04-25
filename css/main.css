@@ -168,3 +168,236 @@ div.dark_rounded #pp_full_res .pp_inline,div.dark_square #pp_full_res .pp_inline
 * html .pp_top .pp_middle,* html .pp_bottom .pp_middle{left:0;position:static}
 .pp_top .pp_right,.pp_bottom .pp_right{height:20px;left:auto;position:absolute;right:0;top:0;width:20px}
 .pp_fade,.pp_gallery li.default a img{display:none}
+
+
+/*--------------------------------------*/
+.flex-container a:active, .flexslider a:active, .flex-container a:focus, .flexslider a:focus {
+    outline: none;
+}
+.slides, .flex-control-nav, .flex-direction-nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.flexslider {
+    margin: 0;
+    padding: 0;
+}
+.flexslider .slides > li {
+    display: none;
+    -webkit-backface-visibility: hidden;
+}
+.flexslider .slides img {
+    width: 100%;
+    display: block;
+}
+.flex-pauseplay span {
+    text-transform: capitalize;
+}
+#portfolio-slider .slides img {
+    width: 100%;
+    display: block;
+    max-height: 405px;
+}
+.slides:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+html[xmlns] .slides {
+    display: block;
+}
+* html .slides {
+    height: 1%}
+.no-js .slides > li:first-child {
+    display: block;
+}
+.flexslider {
+    margin: 0;
+    zoom: 1;
+    position: relative;
+}
+.flex-viewport {
+    max-height: 2000px;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    transition: all 1s ease;
+}
+.carousel li {
+    margin-right: 10px;
+    text-align: center;
+}
+.flex-direction-nav {
+    *height: 0;
+}
+.flex-direction-nav a {
+    display: block;
+    position: absolute;
+    top: 50%;
+	margin-top:-10.5px;
+    z-index: 10;
+    cursor: pointer;
+    text-indent: -9999px;
+    -webkit-transition: all .3s ease;
+    color: transparent!important;
+}
+.flex-direction-nav .flex-next {
+    right: 15px;
+	background-position:-21px 0;
+}
+.flex-direction-nav .flex-prev {
+    left: 15px;
+}
+.flexslider:hover .flex-next:hover, .flexslider:hover .flex-prev:hover {
+    opacity: 1;
+}
+.flex-direction-nav .flex-disabled {
+    cursor: default;
+}
+#home-slider .flex-direction-nav a {
+    width: 33px;
+    height: 35px;
+    margin-top: -17.5px;
+    top: 50%;
+    border: none;
+    background: url(../images/slide-nav.png) no-repeat center center;
+}
+#home-slider .flex-direction-nav a:before {
+    content: ''}
+#home-slider .flex-direction-nav .flex-next {
+    right: 12px;
+    background-position: -32px 0;
+    left: auto;
+}
+#home-slider .flex-direction-nav .flex-prev {
+    left: 12px;
+    background-position: 0 0;
+}
+.flex-direction-nav a {
+    width: 20px;
+    height: 21px;
+	background:url(../images/carousel-nav.png);
+    display: block;
+    cursor: pointer;
+    text-indent: -9999px;
+    overflow: visible!important;
+    color: transparent!important;
+    z-index: 10;
+    text-align: center;
+    font-weight: 700;
+    line-height: 14px;
+    line-height: 35px;
+}
+.flex-progress {
+    background: #e6898c;
+    height: 5px;
+    text-align: right;
+}
+.flex-progress span {
+    background: #d5343a;
+    display: block;
+    height: 5px;
+}
+.flex-control-nav {
+    padding: 15px 10px 0;
+    position: absolute;
+    bottom: 10px;
+    z-index: 10;
+    text-align: left;
+    eft: 10px;
+}
+.flex-control-nav li {
+    margin: 0 2px;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+}
+.flex-control-paging li a {
+    width: 11px;
+    height: 11px;
+    display: block;
+    background: #aeb3c3;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -o-border-radius: 20px;
+    border-radius: 20px;
+    color: transparent;
+    cursor: pointer;
+}
+.flex-control-paging li a:hover {
+    background: #c63171;
+}
+.flex-control-paging li a.flex-active {
+    background: #c63171;
+    cursor: default;
+}
+.flex-control-thumbs {
+    margin: 5px 0 0;
+    position: static;
+    overflow: hidden;
+}
+.flex-control-thumbs li {
+    width: 25%;
+    float: left;
+    margin: 0;
+}
+.flex-control-thumbs img {
+    width: 100%;
+    display: block;
+    opacity: .7;
+    cursor: pointer;
+}
+.flex-control-thumbs img:hover {
+    opacity: 1;
+}
+.flex-control-thumbs .flex-active {
+    opacity: 1;
+    cursor: default;
+}
+.flexslider .slides > li {
+	height: 450px;
+	overflow:hidden;
+}
+.slide-caption {
+	position: absolute;
+	bottom:50px;
+	width: 100%;
+	right: 0;
+}
+.caption {
+	padding:20px;
+	width:400px;
+	color:#fff;
+	text-align:justify;
+	background: rgba(0, 0, 0, .5);
+}
+.caption h2{
+	color:#fff;
+}
+@media screen and (max-width: 860px) {
+    .flex-direction-nav .flex-prev {
+    opacity: 1;
+    left: 0;
+}
+.flex-direction-nav .flex-next {
+    opacity: 1;
+    right: 0;
+}
+} @media (max-width: 768px) {
+    .caption {
+    left: 10px;
+    right: 10px;
+    bottom: 20px;
+    font-size: 16px;
+    padding: 10px;
+}
+.flex-control-nav {
+    display: none;
+}
+.caption h2 {
+    font-size: 18px;
+}
+}

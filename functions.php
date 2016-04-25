@@ -25,6 +25,7 @@ require_once PARENT_DIR . '/includes/theme-scripts.php';
 require_once PARENT_DIR . '/includes/theme-styles.php';
 require_once PARENT_DIR . '/includes/register-widgets.php';
 require_once PARENT_DIR . '/includes/aq_resizer.php';
+require_once PARENT_DIR . '/includes/sidebar-init.php';
 
 add_action("login_head", "my_login_head");
 function my_login_head() {

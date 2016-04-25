@@ -1,7 +1,8 @@
 <?php
+locate_template ('includes/widgets/widget-banners.php',			true, true);
+/*
 locate_template ('includes/widgets/my-carousel-posts.php',	true, true);
 locate_template ('includes/widgets/my-recent-posts.php',	true, true);
-locate_template ('includes/widgets/widget-banners.php',			true, true);
 locate_template ('includes/widgets/widget-video.php',			true, true);
 locate_template ('includes/widgets/widget-posts.php',			true, true);
 locate_template ('includes/widgets/widget-login.php',			true, true);
@@ -32,4 +33,5 @@ locate_template ('includes/widgets/widget-soundcloud.php',		true, true);
 //locate_template ('includes/widgets/widget-custom-author.php',	true, true);
 locate_template ('includes/widgets/widget-authors-posts.php',	true, true);
 //locate_template ('includes/widgets/widget-comments-avatar.php',true, true);
+*/
 ?>

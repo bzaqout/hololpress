@@ -2,7 +2,6 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' :'; } ?> <?php bloginfo('name'); ?></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -21,11 +20,10 @@
     
 	<!---------------- News Ticker ----------------->
 	<div class="news-ticker">
-		<span class="ticker-title">جديد الإعلانات : </span>
+		<span class="ticker-title">موجز الأخبار</span>
             <?php
                 $args=array(
-                    'post_type'=>'newads',
-                    'posts_per_page'=>12,
+                    'posts_per_page'=>20,
                 );
 		query_posts($args);?>
 		<marquee direction="right" onmouseout="this.start()" onmouseover="this.stop()" scrolldelay="100">
@@ -46,11 +44,12 @@
                     <?php top_links()?>
                 </div>
                 <div class="col-sm-3">
+                	
                     <form action="<?php echo home_url( '/' ); ?>" method="get" class="form-inline">
                         <div class="input-group">
                             <input type="text" name="s" id="search" placeholder="<?php _e("بحث","divvat"); ?>" value="<?php the_search_query(); ?>" class="form-control" />
                             <span class="input-group-btn">
-                                <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                                <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
                             </span>
                         </div>
                 </form>
@@ -99,7 +98,9 @@
         </div>
     </header>
     <div class="header-widget">
-    	<?php if ( is_active_sidebar( 'headerWidget' ) ){dynamic_sidebar( 'headerWidget' );}?>
+    	<div class="container">
+    		<?php if ( is_active_sidebar( 'header_sidbar' ) ){dynamic_sidebar( 'header_sidbar' );}?>
+        </div>
     </div>
     
     
