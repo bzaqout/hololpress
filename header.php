@@ -19,18 +19,22 @@
 	<header>
     
 	<!---------------- News Ticker ----------------->
-	<div class="news-ticker">
-		<span class="ticker-title">موجز الأخبار</span>
+     <div class="breaking-news">
+    	<div class="the_ticker">
+    		<div class="bn-title"><span>موجز الأخبار</span></div>
             <?php
                 $args=array(
                     'posts_per_page'=>20,
                 );
-		query_posts($args);?>
-		<marquee direction="right" onmouseout="this.start()" onmouseover="this.stop()" scrolldelay="100">
-            <?php while ( have_posts() ) : the_post(); ?>
-				<a href="<?php the_permalink()?>"><?php the_title();?></a>
-			<?php endwhile; wp_reset_query();?>
-		</marquee>
+				query_posts($args);?>
+    		<div class="news-ticker" data-timeout="500">
+        		<ul>
+                	<?php while ( have_posts() ) : the_post(); ?>
+       					<li><i class="fa fa-angle-double-left"></i><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+                    <?php endwhile; wp_reset_query();?>
+        		</ul>
+			</div>
+		</div>
 	</div>
     <!-----------------Top Header---------------->
     <div class="top-header">

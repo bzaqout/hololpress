@@ -520,28 +520,132 @@ header{
 	background:#377bc8;
 	
 }
-.news-ticker>span{
-	color:#fff;
-	line-height:30px;
-	position:absolute;
-	right:0;
-	top:0;
-	bottom:0;
-	background: #eb9c36;
-	display:block;
-	padding:0 50px;
-	z-index:10;
+/* ==========================================================================
+ *                Breaking news 
+   ========================================================================== */
+.tickercontainer { /* the outer div */
+	height: 38px; 
+	margin: 0; 
+	padding: 0;
+	overflow: hidden; 
 }
-.news-ticker a {
-	color:#fff;
-	display: inline-block;
-	text-align:right;
-	padding:0 35px;
-	direction:rtl;
+.tickercontainer .mask { /* that serves as a mask. so you get a sort of padding both left and right */
+position: relative;
+height: 38px;
+/*width: 718px;*/
+overflow: hidden;
+
 }
-.news-ticker marquee{
-	padding:5px 5px 1px;
-	direction:ltr;
+ul.newsticker { /* that's your list */
+/*Transitions have been added in order set css3 transitions; and have linear easing. Changing these lines you might have unexpected results */
+	-webkit-transition: all 0s linear;
+	-moz-transition: all 0s linear;
+	-o-transition: all 0s linear;
+	transition: all 0s linear;
+	position: relative;
+	margin-right: 20px;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+
+}
+
+.breaking-news {
+    height: 40px;
+    margin-bottom: 5px;
+    clear: both;
+    position: relative;
+}
+
+.the_ticker {
+    overflow: hidden;
+    position: relative;
+}
+
+.breaking-news .bn-title {
+    float: right;
+    background: #bb0000;
+    line-height: 40px;
+    height: 40px;
+    padding: 0 10px 0 14px;
+    color: #ffffff;
+    position: relative;
+    z-index: 2;
+    font-weight: bold;
+    text-align: center;
+    width: 120px;
+}
+.breaking-news .bn-title span {
+    z-index: 2;
+    position: relative;
+}
+.breaking-news .bn-title:after {
+    right: 100%;
+    top: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(187,0,0,0);
+    border-right-color: #b00;
+    border-width: 20px;
+    margin-top: -20px;
+    z-index: 1;
+    border-right-width: 10px;
+}
+
+        
+.news-ticker {
+    background: #fff;
+    height: 40px;
+    line-height: 38px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: 1px solid #dfdfdf;
+    padding:0 2px 0 10px;
+    margin-right: 120px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+.both-sidebars .news-ticker {
+    margin-right: 135px;
+}
+.news-ticker ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+ul.newsticker li {
+float: right; /* important: display inline gives incorrect results when you check for elem's width */
+margin: 0;
+padding-left: 15px;
+/*background: #fff;*/
+line-height:38px;
+}
+
+	.news-ticker li a {
+    color: #232426;
+	font-size:14px;
+	white-space: nowrap;
+	padding: 0;
+}
+.news-ticker li a:hover {
+    color: #F09217;
+}
+.news-ticker li i {
+    color: #ffa507;
+    margin-left: 8px;
+}
+.news-ticker li img {
+    margin-left: 8px;
+    display: inline-block;
+    position: relative;
+    top: -2px;
+    max-width: 16px;
 }
 .banners-holder{
 	margin-bottom:15px;
