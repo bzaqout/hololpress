@@ -1,10 +1,22 @@
  $(window).load(function() {
-	var $flexslider = $('#home-slider');
-		$flexslider.flexslider({
-			animation: 'fade',
-			controlNav:false,
-			directionNav:false,
-		});	
+	$('#home-slider').flexslider({
+		animation: 'fade',
+		randomize: false,
+		pauseOnHover: true,
+		prevText: "",
+		nextText: "",
+		after: function(slider) {
+			$('.slider-caption').animate({bottom:12,}, 400)
+		},
+		before: function(slider) {
+			$('.slider-caption').animate({ bottom:-105,}, 400)
+		},	
+		start: function(slider) {
+			var slide_control_width = 100/5;
+			$('.flex-control-nav li').css('width', slide_control_width+'%');
+			$('.slider-caption').animate({ bottom:12,}, 400)
+		}
+	  });
 });
 jQuery(document).ready (function ($) {
 	

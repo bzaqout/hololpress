@@ -17,10 +17,11 @@
 						<li>
                         	<a href="<?php the_permalink()?>">
                                 <img src="<?= $img_url?>" alt="<?php the_title();?>" />
-                                <div class="caption">
-                                	<h1><?php the_title()?></h1>
-                                </div>
                             </a>
+                            <div class="slider-caption">
+                            	<h2><a href="<?php the_permalink()?>"><?php the_title()?></a></h2>
+                                <p><?= get_the_excerpt()?></p>
+							</div>
                         </li>
 					<?php 
 					endwhile;wp_reset_query();?>

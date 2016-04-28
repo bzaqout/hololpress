@@ -359,6 +359,10 @@ img {
 ::-webkit-scrollbar-track {
  background-color: #FFF;
 }
+.googleads{
+	padding:19px 0;
+	float:left;
+}
 header{
 	background:#fff;
 	margin-bottom:15px;
@@ -634,10 +638,10 @@ line-height:38px;
 	padding: 0;
 }
 .news-ticker li a:hover {
-    color: #F09217;
+    color: #377bc8;
 }
 .news-ticker li i {
-    color: #ffa507;
+    color: #377bc8;
     margin-left: 8px;
 }
 .news-ticker li img {

@@ -30,7 +30,7 @@
     		<div class="news-ticker" data-timeout="500">
         		<ul>
                 	<?php while ( have_posts() ) : the_post(); ?>
-       					<li><i class="fa fa-angle-double-left"></i><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+       					<li><i class="fa fa-newspaper-o"></i><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
                     <?php endwhile; wp_reset_query();?>
         		</ul>
 			</div>
@@ -76,6 +76,17 @@
                 </div>
                 <div class="col-sm-8">
                 	<div class="googleads">
+                    	<script type="text/javascript"><!--
+google_ad_client = "ca-pub-4805296191157116";
+/* اعلان فوق  الاخبار المثبته المتحركة */
+google_ad_slot = "9907446834";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
                     </div>
                 </div>
             </div>
