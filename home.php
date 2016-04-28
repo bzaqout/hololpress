@@ -12,9 +12,10 @@
 				<div id="news-block-1" class="box-container"> 
                 	<div class="row">
 						<?php 
-                            $args = array(
-                            'numberposts' => 20,
-                            'posts_per_page' => 20,
+						$args = array(
+							'cat' =>76,
+                            'numberposts' => 12,
+                            'posts_per_page' => 12,
                         );
                         query_posts($args);
                         while ( have_posts() ) : the_post();?>
@@ -33,7 +34,7 @@
                                     </div>
                                     <h2 class="post-box-title">
                                         <a href="<?php the_permalink()?>">
-                                            <?php the_title()?>
+                                            <?=limit_words(get_the_title(),10)?>...
                                         </a>
                                     </h2>
                                 </div>

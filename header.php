@@ -41,8 +41,7 @@
     	<div class="container">
             <div class="row">
                 <div class="col-sm-3">
-                    <span class="current-date"><i class="fa fa-calender"></i> الثلاثاء , 12 رجب 1437 هـ , 19 أبريل 2016 م
-    </span>
+                    <span class="current-date"><i class="fa fa-calender"></i><?=ArabicDate()?></span>
                 </div>
                 <div class="col-sm-6">
                     <?php top_links()?>
