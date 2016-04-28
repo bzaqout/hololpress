@@ -3,10 +3,9 @@
           <ul class="slides">
 					<?php 
 					$args = array(
+						'cat' =>76,
 						'numberposts' => 5,
 						'posts_per_page' => 5,
-						'meta_key'   => 'enable_slider',
-						'meta_value' => 1
 					);
 					query_posts($args);
 					while ( have_posts() ) : the_post();
@@ -20,7 +19,7 @@
                             </a>
                             <div class="slider-caption">
                             	<h2><a href="<?php the_permalink()?>"><?php the_title()?></a></h2>
-                                <p><?= get_the_excerpt()?></p>
+                                <p><?= limit_words(get_the_excerpt(),25)?></p>
 							</div>
                         </li>
 					<?php 

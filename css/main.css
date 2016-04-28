@@ -210,14 +210,19 @@ html[xmlns] .slides {
 .no-js .slides > li:first-child {
     display: block;
 }
-
+.flexslider .slides>li {
+    display: none;
+    -webkit-backface-visibility: hidden;
+    position: relative;
+    height: 400px;
+}
 .flexslider {
     overflow: hidden;
     margin: 0 auto 20px;
     position: relative;
     zoom: 1;
     width: 100%;
-    height: 498px;
+    height: 400px;
     max-width: 100%;
     background: #000;
 }
@@ -271,6 +276,12 @@ html[xmlns] .slides {
     -webkit-transition: all .3s ease;
        -moz-transition: all .3s ease;
             transition: all .3s ease;
+	    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .flex-direction-nav .flex-next:before,
@@ -402,11 +413,14 @@ html[xmlns] .slides {
 .slider-caption h2,
 .full-width .content .slider-caption h2 {
     color: #FFF;
-    font-size: 35px;
+    font-size: 22px;
+	line-height:26px;
 }
 
-.slider-caption h2,
+.slider-caption h2{
+	margin-bottom:10px;
+}
 .slider-caption p {
-    padding: 0 15px;
+	margin:0;
 }
 

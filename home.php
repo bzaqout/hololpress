@@ -24,7 +24,7 @@
                                         <div class="post-thumbnail">
                                             <a href="<?php the_permalink(); ?>" rel="bookmark">
 												<?php the_post_thumbnail( 'holol-medium' ); ?>
-                                                <span class="fa overlay-icon"></span>
+                                                <span class="fa fa-file-text"></span>
                                             </a>
                                         </div><!-- post-thumbnail /-->
                                     <?php endif; ?>
@@ -64,7 +64,7 @@
                                         <div class="post-thumbnail">
                                             <a href="<?php the_permalink(); ?>" rel="bookmark">
 												<?php the_post_thumbnail( 'holol-medium' ); ?>
-                                                <span class="fa overlay-icon"></span>
+                                                <span class="fa fa-file-text"></span>
                                             </a>
                                         </div><!-- post-thumbnail /-->
                                     <?php endif; ?>
@@ -103,7 +103,7 @@
                                 <div class="post-thumbnail">	
                                 	<a href="<?php the_permalink()?>" title="<?php the_title( )?>" rel="bookmark">
                                     	<?php the_post_thumbnail('holol-medium')?>
-                                        <span class="fa overlay-icon"></span>
+                                        <span class="fa fa-file-text"></span>
                                         <h3><?php the_permalink( )?></h3>
                                     </a>
 								</div>
@@ -135,7 +135,7 @@
                                 <div class="post-thumbnail">	
                                 	<a href="<?php the_permalink()?>" title="<?php the_title( )?>" rel="bookmark">
                                     	<?php the_post_thumbnail('holol-medium')?>
-                                        <span class="fa overlay-icon"></span>
+                                        <span class="fa fa-file-text"></span>
                                         <h3><?php the_title( )?></h3>
                                     </a>
 								</div>
@@ -150,7 +150,7 @@
                                     <div class="post-thumbnail">	
                                         <a href="<?php the_permalink()?>" title="<?php the_title( )?>" rel="bookmark">
                                             <?php the_post_thumbnail('holol-medium')?>
-                                            <span class="fa overlay-icon"></span>
+                                            <span class="fa fa-file-text"></span>
                                             <h3><?php the_title( )?></h3>
                                         </a>
                                     </div>
@@ -182,7 +182,7 @@
                                 <div class="post-thumbnail">	
                                 	<a href="<?php the_permalink()?>" title="<?php the_title( )?>" rel="bookmark">
                                     	<?php the_post_thumbnail('holol-medium')?>
-                                        <span class="fa overlay-icon"></span>
+                                        <span class="fa fa-file-text"></span>
                                         <h3><?php the_title( )?></h3>
                                     </a>
 								</div>
@@ -255,7 +255,7 @@
                                     <div class="post-thumbnail">	
                                         <a href="<?php the_permalink()?>" title="<?php the_title( )?>" rel="bookmark">
                                             <?php the_post_thumbnail('holol-small')?>
-                                            <span class="fa overlay-icon"></span>
+                                            <span class="fa fa-file-text"></span>
                                         </a>
                                     </div>
                                     <?php }?>
@@ -294,7 +294,7 @@
                                             <div class="post-thumbnail">	
                                                 <a href="<?php the_permalink()?>" title="<?php the_title( )?>" rel="bookmark">
                                                     <?php the_post_thumbnail('holol-medium')?>
-                                                    <span class="fa overlay-icon"></span>
+                                                    <span class="fa fa-file-text"></span>
                                                     
                                                 </a>
                                             </div>
@@ -308,7 +308,7 @@
                                             <div class="post-thumbnail">	
                                                 <a href="<?php the_permalink()?>" title="<?php the_title( )?>" rel="bookmark">
                                                     <?php the_post_thumbnail('holol-small')?>
-                                                    <span class="fa overlay-icon"></span>
+                                                    <span class="fa fa-file-text"></span>
                                                     
                                                 </a>
                                             </div>
@@ -344,7 +344,7 @@
                                             <div class="post-thumbnail">	
                                                 <a href="<?php the_permalink()?>" title="<?php the_title( )?>" rel="bookmark">
                                                     <?php the_post_thumbnail('holol-medium')?>
-                                                    <span class="fa overlay-icon"></span>
+                                                    <span class="fa fa-file-text"></span>
                                                     
                                                 </a>
                                             </div>
