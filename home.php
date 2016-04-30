@@ -54,6 +54,7 @@
                 	<div class="row">
 						<?php 
                             $args = array(
+							'cat' =>76,
                             'numberposts' => 10,
                             'posts_per_page' => 10,
                         );
@@ -74,7 +75,7 @@
                                     </div>
                                     <h2 class="post-box-title">
                                         <a href="<?php the_permalink()?>">
-                                            <?php the_title()?>
+                                            <?=limit_words(get_the_title(),10)?>...
                                         </a>
                                     </h2>
                                 </div>
@@ -90,10 +91,11 @@
                 	<h2>اخبار التعليم</h2>
                     <a class="readmore" href="#"><i class="fa fa-plus"></i> المزيد</a>
                 </div>
-				<div id="pic-title-1" class="box-container news-pic clearfix"> 
+				<div id="news-pic-1" class="box-container news-pic clearfix"> 
                 	<div class="row">
 						<?php 
                             $args = array(
+							'cat' =>76,
                             'numberposts' => 12,
                             'posts_per_page' => 12,
                         );
@@ -104,8 +106,7 @@
                                 <div class="post-thumbnail">	
                                 	<a href="<?php the_permalink()?>" title="<?php the_title( )?>" rel="bookmark">
                                     	<?php the_post_thumbnail('holol-medium')?>
-                                        <span class="fa fa-file-text"></span>
-                                        <h3><?php the_permalink( )?></h3>
+                                        <h3><?=limit_words(get_the_title(),10)?>...</h3>
                                     </a>
 								</div>
 								<?php }?>	
@@ -122,45 +123,41 @@
                 	<h2>اخبار التعليم</h2>
                     <a class="readmore" href="#"><i class="fa fa-plus"></i> المزيد</a>
                 </div>
-				<div id="pic-title-2" class="box-container news-pic clearfix"> 
-                	<div class="row">
+				<div id="pic-box-1" class="box-container pic-box cat-box clearfix"> 
+                	<ul>
 						<?php 
                             $args = array(
-                            'numberposts' => 7,
-                            'posts_per_page' => 7,
+							'cat' =>76,
+                            'numberposts' => 5,
+                            'posts_per_page' => 5,
                         );
-                        query_posts($args);?>
-						<div class="col-md-4 col-sm-6">
-                       <?php while ( have_posts() ) : the_post();?>
-                            	<?php if ( function_exists("has_post_thumbnail") && has_post_thumbnail() ) {?>	
-                                <div class="post-thumbnail">	
-                                	<a href="<?php the_permalink()?>" title="<?php the_title( )?>" rel="bookmark">
-                                    	<?php the_post_thumbnail('holol-medium')?>
-                                        <span class="fa fa-file-text"></span>
-                                        <h3><?php the_title( )?></h3>
-                                    </a>
-								</div>
-								<?php }?>	
-                        <?php break; endwhile;?>
-                        </div>
-                        <div class="col-md-8 col-sm-6">
-                        	<div class="row">
+                        query_posts($args); $count=0;?>
 							 <?php while ( have_posts() ) : the_post();?>
-                                <div class="col-md-4 col-sm-6">
-                                    <?php if ( function_exists("has_post_thumbnail") && has_post_thumbnail() ) {?>	
-                                    <div class="post-thumbnail">	
-                                        <a href="<?php the_permalink()?>" title="<?php the_title( )?>" rel="bookmark">
-                                            <?php the_post_thumbnail('holol-medium')?>
-                                            <span class="fa fa-file-text"></span>
-                                            <h3><?php the_title( )?></h3>
-                                        </a>
-                                    </div>
-                                    <?php }?>	
-                                </div>
-                            <?php break; endwhile; wp_reset_query();?>
-                            </div>
-                        </div>
-                    </div>
+                             	<?php if(++$count == 1) : ?>
+                                <li class="first-pic">
+                                    <?php if ( function_exists("has_post_thumbnail") && has_post_thumbnail() ) : ?>			
+                                        <div class="post-thumbnail">
+                                            <a href="<?php the_permalink(); ?>" class="ttip">
+                                                <?php the_post_thumbnail( 'holol-large' ); ?>
+                                                <h3><?=limit_words(get_the_title(),10)?>...</h3>
+                                            </a>
+                                        </div><!-- post-thumbnail /-->
+                                    <?php endif; ?>
+                                </li><!-- .first-pic -->
+								<?php else: ?>
+                                <li>
+                                    <?php if ( function_exists("has_post_thumbnail") && has_post_thumbnail() ) : ?>			
+                                        <div class="post-thumbnail">
+                                            <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="ttip">
+                                                <?php the_post_thumbnail( 'holol-medium' ); ?>
+                                                <h3><?php the_title()?></h3>
+                                            </a>
+                                        </div><!-- post-thumbnail /-->
+                                    <?php endif; ?>			
+                                </li>	
+                                <?php endif; ?>
+						<?php  endwhile; wp_reset_query();?>
+                    </ul>
 				</div>
 			</div>
             <!-------------------RECENT POST-------------------------->
@@ -169,45 +166,41 @@
                 	<h2>اخبار التعليم</h2>
                     <a class="readmore" href="#"><i class="fa fa-plus"></i> المزيد</a>
                 </div>
-				<div id="pic-title-3" class="news-pic box-container clearfix"> 
-                	<div class="row">
+				<div id="pic-box-2" class="box-container pic-box cat-box clearfix"> 
+                	<ul>
 						<?php 
                             $args = array(
-                            'numberposts' => 7,
-                            'posts_per_page' => 7,
+							'cat' =>76,
+                            'numberposts' => 5,
+                            'posts_per_page' => 5,
                         );
-                        query_posts($args);?>
-						<div class="col-md-4 col-sm-6">
-                       <?php while ( have_posts() ) : the_post();?>
-                            	<?php if ( function_exists("has_post_thumbnail") && has_post_thumbnail() ) {?>	
-                                <div class="post-thumbnail">	
-                                	<a href="<?php the_permalink()?>" title="<?php the_title( )?>" rel="bookmark">
-                                    	<?php the_post_thumbnail('holol-medium')?>
-                                        <span class="fa fa-file-text"></span>
-                                        <h3><?php the_title( )?></h3>
-                                    </a>
-								</div>
-								<?php }?>	
-                        <?php break; endwhile;?>
-                        </div>
-                        <div class="col-md-8 col-sm-6">
-                        	<div class="row">
+                        query_posts($args); $count=0;?>
 							 <?php while ( have_posts() ) : the_post();?>
-                                <div class="col-md-4 col-sm-6">
-                                    <?php if ( function_exists("has_post_thumbnail") && has_post_thumbnail() ) {?>	
-                                    <div class="post-thumbnail">	
-                                        <a href="<?php the_permalink()?>" title="<?php the_title( )?>" rel="bookmark">
-                                            <?php the_post_thumbnail('holol-medium')?>
-                                            <span class="fa overlay-icon"></span>
-                                            <h3><?php the_title( )?></h3>
-                                        </a>
-                                    </div>
-                                    <?php }?>	
-                                </div>
-                            <?php break; endwhile; wp_reset_query();?>
-                            </div>
-                        </div>
-                    </div>
+                             	<?php if(++$count == 1) : ?>
+                                <li class="first-pic">
+                                    <?php if ( function_exists("has_post_thumbnail") && has_post_thumbnail() ) : ?>			
+                                        <div class="post-thumbnail">
+                                            <a href="<?php the_permalink(); ?>" class="ttip">
+                                                <?php the_post_thumbnail( 'holol-large' ); ?>
+                                                <h3><?=limit_words(get_the_title(),10)?>...</h3>
+                                            </a>
+                                        </div><!-- post-thumbnail /-->
+                                    <?php endif; ?>
+                                </li><!-- .first-pic -->
+								<?php else: ?>
+                                <li>
+                                    <?php if ( function_exists("has_post_thumbnail") && has_post_thumbnail() ) : ?>			
+                                        <div class="post-thumbnail">
+                                            <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="ttip">
+                                                <?php the_post_thumbnail( 'holol-medium' ); ?>
+                                                <h3><?php the_title()?></h3>
+                                            </a>
+                                        </div><!-- post-thumbnail /-->
+                                    <?php endif; ?>			
+                                </li>	
+                                <?php endif; ?>
+						<?php  endwhile; wp_reset_query();?>
+                    </ul>
 				</div>
 			</div>
             
@@ -221,6 +214,7 @@
                 	<div class="row">
 						<?php 
                             $args = array(
+							'cat' =>76,
                             'numberposts' => 4,
                             'posts_per_page' => 4,
                         );
@@ -282,6 +276,7 @@
                             <ul>
                                 <?php 
                                     $args = array(
+									'cat' =>76,
                                     'numberposts' => 4,
                                     'posts_per_page' => 4,
                                 );
@@ -315,6 +310,9 @@
                                             </div>
                                             <?php }?>
                                             <h3 class="post-box-title"><a href="<?php the_permalink()?>"><?php the_title( )?></a></h3>
+                                            <div class="post-meta">
+												<?php holol_get_time()?>
+                                            </div>
                                         </li>
                                     <?php }?>
                                 <?php endwhile; wp_reset_query();?>
@@ -332,6 +330,7 @@
                             <ul>
                                 <?php 
                                     $args = array(
+									'cat' =>76,
                                     'numberposts' => 4,
                                     'posts_per_page' => 4,
                                 );
@@ -365,6 +364,9 @@
                                             </div>
                                             <?php }?>
                                             <h3 class="post-box-title"><a href="<?php the_permalink()?>"><?php the_title( )?></a></h3>
+                                            <div class="post-meta">
+												<?php holol_get_time()?>
+                                            </div>
                                         </li>
                                     <?php }?>
                                 <?php endwhile; wp_reset_query();?>

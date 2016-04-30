@@ -14,7 +14,7 @@ function limit_words($string, $word_limit)
 if ( function_exists( 'add_image_size' ) ){
 	add_image_size( 'holol-small'		,110,  75,  true );
 	add_image_size( 'holol-medium'	,310,  165, true );
-	add_image_size( 'holol-large'		,310,  205, true );
+	add_image_size( 'holol-large'		,382,  250, true );
 	add_image_size( 'slider'		,660,  330, true );
 	add_image_size( 'big-slider'	,1050, 525, true );
 }

@@ -359,7 +359,7 @@ html[xmlns] .slides {
     width: 100%;
     position: absolute;
     bottom: -1px;
-    text-align: center;
+    text-align: left;
     height: 13px;
     z-index: 2;
 }
@@ -375,10 +375,10 @@ html[xmlns] .slides {
     display: block;
     cursor: pointer;
     text-indent: -9999px;
-    width: 100%;
+    width: 13px;
+	height:13px;
+	border-radius:50%;
     background: #666;
-    border-right:1px solid #888; 
-    height: 13px;
     -webkit-transition: all .5s ease;
        -moz-transition: all .5s ease;
             transition: all .5s ease;
@@ -401,10 +401,10 @@ html[xmlns] .slides {
 .slider-caption {
     position: absolute;
     width: 100%;
-    padding: 15px 0;
+    padding: 15px;
     background: #000;
     right: 0;
-    bottom: 13px;
+    bottom: 0;
     color: #FFF;
     opacity: 0.8;
 }

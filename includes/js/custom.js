@@ -3,18 +3,17 @@
 		animation: 'fade',
 		randomize: false,
 		pauseOnHover: true,
+		controlNav:false,
 		prevText: "",
 		nextText: "",
 		after: function(slider) {
-			$('.slider-caption').animate({bottom:12,}, 400)
+			$('.slider-caption').animate({bottom:-1,}, 400)
 		},
 		before: function(slider) {
-			$('.slider-caption').animate({ bottom:-105,}, 400)
+			$('.slider-caption').animate({ bottom:-120,}, 400)
 		},	
 		start: function(slider) {
-			var slide_control_width = 100/5;
-			$('.flex-control-nav li').css('width', slide_control_width+'%');
-			$('.slider-caption').animate({ bottom:12,}, 400)
+			$('.slider-caption').animate({ bottom:-1,}, 400)
 		}
 	  });
 });
